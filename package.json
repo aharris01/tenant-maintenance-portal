@@ -8,10 +8,20 @@
   "scripts": {
     "client": "npm start --workspace apps/client",
     "server": "npm start --workspace apps/server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint .",
+    "lint:client": "eslint apps/client",
+    "lint:server": "eslint apps/server",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "@eslint/js": "^9.39.4",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0"
   },
   "keywords": [],
   "author": "",
